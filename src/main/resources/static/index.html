@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body ng-app="test">
+<h1>{{'He' + 'llo'}}</h1>
+
+<h2>{{ 'HEADLINE' | translate }}</h2>
+
+<p>{{ 'INTRO_TEXT' | translate }}</p>
+
+
+<div ng-controller="TranslateController">
+    <p>{{date | momentL }}</p>
+    <a ng-click="changeLanguage('fr')">fr</a>
+    <a ng-click="changeLanguage('en')">en</a>
+</div>
+
+<script type="text/javascript"
+        src="/bower/angular/angular.min.js"></script>
+<script type="text/javascript"
+        src="/bower/angular-translate/angular-translate.min.js"></script>
+<script src="/bower/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+<script src="/bower/angular-translate-loader-url/angular-translate-loader-url.min.js"></script>
+<script src="/bower/moment/moment.js"></script>
+<script src="/bower/moment/locale/fr.js"></script>
+<script src="/bower/moment/locale/en-gb.js"></script>
+<script type="text/javascript"
+        src="/main.js"></script>
+
+</body>
+</html>
